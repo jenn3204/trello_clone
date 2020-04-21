@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+}
+
+#section_container {
+  display: flex;
+  flex-direction: row;
+}
+
+section,
+form {
+  width: 250px;
+  border: 0.2px solid black;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.list {
+  height: 600px;
+}
+
+#form {
+  height: 40px;
+  padding: 10px 0 0 0;
+  width: 270px;
+}
+
+#form h1 {
+  text-align: center;
+}
+
+form {
+  padding: 10px;
+  width: 250px;
+  margin: 30px 0 0 0;
+}
+
+form label,
+button[type="submit"] {
+  display: block;
+  margin: 20px 0 0 0;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+}
+
+form input[type="text"]:valid:not(:placeholder-shown),
+input[type="number"]:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border: 2px solid green;
+}
+
+form input[type="text"]:invalid:not(:placeholder-shown),
+input[type="number"]:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+}
+
+fieldset {
+  padding: 10px;
+  margin: 20px 0 0 0;
+  border: 2px solid white;
+}
+
+fieldset label {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+article {
+  padding: 5px;
+  margin: 10px 0 0 0;
+  border: 0.5px solid black;
+  height: 80px;
+  position: relative;
+}
+
+.deletebutton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button {
+  height: 20px;
+  width: 50px;
+  background-color: transparent;
+  border: 0.5px solid black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.left {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.right {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.edit {
+  position: absolute;
+  bottom: 5px;
+  right: 100px;
+}
+
+.hide {
+  visibility: hidden;
+}

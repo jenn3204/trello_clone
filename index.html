@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello clone</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Trelloboard</h1>
+    </header>
+
+    <main>
+      <template id="full">
+        <article>
+          <h3></h3>
+        </article>
+      </template>
+
+      <template id="card">
+        <article>
+          <button class="deletebutton">X</button>
+          <h4></h4>
+          <p></p>
+          <button class="edit button">edit</button>
+          <button class="left button"><</button>
+          <button class="right button">></button>
+        </article>
+      </template>
+
+      <div id="section_container">
+        <section class="list" id="todo">
+          <h3>To do</h3>
+        </section>
+        <section class="list" id="doing">
+          <h3>In progress</h3>
+        </section>
+        <section class="list" id="done">
+          <h3>Done</h3>
+        </section>
+
+        <section id="form">
+          <h1 id="showform">+</h1>
+          <form class="hide">
+            <h3>Add a new task!</h3>
+
+            <label for="title">Title </label>
+            <input id="title" type="text" name="title" placeholder="title" />
+
+            <label for="desc">Describtion </label>
+            <textarea id="desc" name="desc" placeholder="write a describtion"></textarea>
+
+            <label for="creator">Creator </label>
+            <input id="creator" type="text" name="creator" placeholder="who's the creator?" />
+
+            <label for="deadling"> Deadline</label>
+            <input id="deadling" type="date" name="deadline" />
+
+            <label>Estimated time for task (hours) <input type="number" name="estimate" placeholder="0" /></label>
+            <fieldset>
+              <legend>Which list?</legend>
+              <label><input type="radio" name="radio" value="todo" /> todo</label>
+              <label><input type="radio" name="radio" value="doing" /> doing</label>
+              <label><input type="radio" name="radio" value="done" /> done</label>
+            </fieldset>
+
+            <label for="color">Color for this card </label>
+            <input id="color" type="color" name="color" value="#ffffff" />
+
+            <button type="submit" name="submit_button">Add</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
