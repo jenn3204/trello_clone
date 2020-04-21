@@ -14,13 +14,13 @@
 
     <main>
       <template id="full">
-        <article>
+        <article id="popup">
           <h3></h3>
         </article>
       </template>
 
       <template id="card">
-        <article>
+        <article id="card_article">
           <button class="deletebutton">X</button>
           <h4></h4>
           <p></p>
@@ -43,7 +43,7 @@
 
         <section id="form">
           <h1 id="showform">+</h1>
-          <form class="hide">
+          <form id="add_form" class="hide">
             <h3>Add a new task!</h3>
 
             <label for="title">Title </label>
@@ -73,6 +73,38 @@
           </form>
         </section>
       </div>
+
+      <article id="popup_form" class="hide">
+        <form id="edit_form">
+          <h3 id="close">X</h3>
+          <h3>Edit the task!</h3>
+
+          <label for="title">Title </label>
+          <input id="title" type="text" name="title" placeholder="title" />
+
+          <label for="desc">Describtion </label>
+          <textarea id="desc" name="desc" placeholder="write a describtion"></textarea>
+
+          <label for="creator">Creator </label>
+          <input id="creator" type="text" name="creator" placeholder="who's the creator?" />
+
+          <label for="deadling"> Deadline</label>
+          <input id="deadling" type="date" name="deadline" />
+
+          <label>Estimated time for task (hours) <input type="number" name="estimate" placeholder="0" /></label>
+          <fieldset>
+            <legend>Which list?</legend>
+            <label><input type="radio" name="radio" value="todo" /> todo</label>
+            <label><input type="radio" name="radio" value="doing" /> doing</label>
+            <label><input type="radio" name="radio" value="done" /> done</label>
+          </fieldset>
+
+          <label for="color">Color for this card </label>
+          <input id="color" type="color" name="color" value="#ffffff" />
+
+          <button type="submit">Add</button>
+        </form>
+      </article>
     </main>
 
     <script src="script.js"></script>
