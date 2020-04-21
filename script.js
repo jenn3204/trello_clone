@@ -67,9 +67,15 @@ function showCard(card) {
   const cardTemplate = document.querySelector("#card").content;
   const cardclone = cardTemplate.cloneNode(true);
 
+  let deadline = card.deadline;
+  let t = deadline.indexOf("T");
+  let date = deadline.slice(0, t);
+  console.log(date);
+
   cardclone.querySelector("article").dataset.id = card._id;
   cardclone.querySelector("h4").textContent = card.title;
-  cardclone.querySelector("p").textContent = card.desc;
+  cardclone.querySelector("#desc_p").textContent = card.desc;
+  cardclone.querySelector("#deadline_p").textContent = date;
   cardclone.querySelector("article").style.background = card.color;
 
   cardclone.querySelector(".deletebutton").addEventListener("click", () => deleteIt(card._id));
@@ -182,10 +188,14 @@ function put(id, card) {
     .then((newData) => {
       let newclone = document.querySelector(`article[data-id="${id}"]`);
       newclone.remove();
-      console.log(newclone);
-      console.log(id);
+
+      let deadline = newData.deadline;
+      let t = deadline.indexOf("T");
+      let date = deadline.slice(0, t);
+
       newclone.querySelector("h4").textContent = newData.title;
-      newclone.querySelector("p").textContent = newData.desc;
+      newclone.querySelector("#desc_p").textContent = newData.desc;
+      newclone.querySelector("#deadline_p").textContent = date;
       newclone.style.background = newData.color;
       document.querySelector(`#${newData.list}`).appendChild(newclone);
     });
@@ -201,6 +211,7 @@ function right(card, id) {
     card.list = "done";
   } else if (card.list == "doing") {
     doneList.appendChild(cardclone);
+    card.list = "done";
   } else if (card.list == "done") {
     doneList.appendChild(cardclone);
   }
