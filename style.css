@@ -46,18 +46,34 @@ form {
 form {
   padding: 10px;
   width: 250px;
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+}
+
+form input,
+textarea {
+  font-size: 14px;
 }
 
 form label,
 button[type="submit"] {
   display: block;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 form input[type="text"],
 form textarea {
   width: 100%;
+}
+
+form input[type="text"],
+input[type="number"],
+input[type="date"] {
+  height: 30px;
+}
+
+form textarea {
+  height: 60px;
 }
 
 form input[type="text"]:valid:not(:placeholder-shown),
@@ -74,7 +90,7 @@ textarea:invalid:not(:placeholder-shown) {
 
 fieldset {
   padding: 10px;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   border: 2px solid white;
 }
 
@@ -89,6 +105,18 @@ fieldset label {
   border: 0.5px solid black;
   height: 100px;
   position: relative;
+}
+
+button[type="submit"] {
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  background-color: lightblue;
 }
 
 .deletebutton {
@@ -153,7 +181,7 @@ fieldset label {
 
 #popup_form form {
   width: 400px;
-  height: 500px;
+  height: 550px;
 }
 
 #close {
